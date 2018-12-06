@@ -14,7 +14,7 @@ LABEL maintainer="dblancoit@gmail.com"
 
 RUN apk update && apk add git
 
-WORKDIR /reveal.js
+WORKDIR /usr/src/reveal.js
 
 RUN git clone https://github.com/hakimel/reveal.js.git
 RUN rm -rf test .travis.yml CONTRIBUTING.md .gitignore demo.html index.html

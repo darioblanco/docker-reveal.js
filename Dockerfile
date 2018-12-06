@@ -12,9 +12,11 @@
 FROM node:10.14-alpine
 LABEL maintainer="dblancoit@gmail.com"
 
-WORKDIR /usr/src/
+RUN apk update && apk add git
+
+WORKDIR /reveal.js
+
 RUN git clone https://github.com/hakimel/reveal.js.git
-WORKDIR /usr/src/reveal.js
 RUN rm -rf test .travis.yml CONTRIBUTING.md .gitignore demo.html index.html
 RUN npm install
 

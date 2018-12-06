@@ -16,8 +16,7 @@ RUN apk update && apk add git
 
 WORKDIR /usr/src/reveal.js
 
-RUN git clone https://github.com/hakimel/reveal.js.git
-RUN rm -rf test .travis.yml CONTRIBUTING.md .gitignore demo.html index.html
+RUN git clone https://github.com/hakimel/reveal.js.git .
 RUN npm install
 
 CMD ["npm", "start"]
